@@ -4,50 +4,40 @@
 <!-- HERO SECTION WITH ANIMATED SVG -->
 <!-- ============================================================================= -->
 
-<svg viewBox="0 0 1000 350" xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" style="max-width: 100%; margin-bottom: 20px;">
+<svg viewBox="0 0 1200 280" xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" style="max-width: 100%; margin: 20px 0;">
   <defs>
-    <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#00E5FF;stop-opacity:0.15" />
-      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:0.1" />
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00E5FF;stop-opacity:0.12" />
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:0.08" />
     </linearGradient>
   </defs>
   
-  <!-- Fond -->
-  <rect width="1000" height="350" fill="#0F172A"/>
-  <rect width="1000" height="350" fill="url(#heroGradient)"/>
+  <rect width="1200" height="280" fill="#0F172A"/>
+  <rect width="1200" height="280" fill="url(#heroGrad)"/>
   
-  <!-- Décoration coins -->
-  <circle cx="80" cy="60" r="50" fill="none" stroke="#00E5FF" stroke-width="1" opacity="0.2"/>
-  <circle cx="920" cy="290" r="60" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.2"/>
+  <circle cx="100" cy="50" r="40" fill="none" stroke="#00E5FF" stroke-width="1" opacity="0.15"/>
+  <circle cx="1100" cy="230" r="50" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.15"/>
   
-  <!-- Titre -->
-  <text x="500" y="95" font-size="72" font-weight="900" text-anchor="middle" fill="#00E5FF" font-family="'Courier New', monospace">TOUM001</text>
+  <text x="600" y="65" font-size="64" font-weight="900" text-anchor="middle" fill="#00E5FF" font-family="monospace">TOUM001</text>
   
-  <!-- Sous-titre -->
-  <text x="500" y="155" font-size="28" text-anchor="middle" fill="#00E5FF" font-family="'Courier New', monospace" opacity="0.9">Full-Stack Developer • AI/ML Enthusiast</text>
+  <text x="600" y="120" font-size="24" text-anchor="middle" fill="#00E5FF" font-family="monospace" opacity="0.95">Full-Stack Developer • AI/ML Enthusiast</text>
   
-  <!-- Description -->
-  <text x="500" y="195" font-size="16" text-anchor="middle" fill="#A0AEC0">Building innovative solutions with modern tech</text>
+  <text x="600" y="155" font-size="14" text-anchor="middle" fill="#A0AEC0">Building innovative solutions with modern tech</text>
   
-  <!-- Ligne déco -->
-  <line x1="250" y1="215" x2="750" y2="215" stroke="#00E5FF" stroke-width="2" opacity="0.4"/>
+  <line x1="250" y1="170" x2="950" y2="170" stroke="#00E5FF" stroke-width="1.5" opacity="0.3"/>
   
-  <!-- Stat boxes -->
-  <g>
-    <!-- Box 1 -->
-    <rect x="150" y="245" width="200" height="65" rx="8" fill="none" stroke="#00E5FF" stroke-width="2" opacity="0.7"/>
-    <text x="250" y="268" font-size="14" text-anchor="middle" fill="#00E5FF" font-weight="bold">10+ PROJECTS</text>
-    <text x="250" y="295" font-size="11" text-anchor="middle" fill="#A0AEC0">Created & Deployed</text>
+  <g id="boxes">
+    <rect x="120" y="190" width="280" height="70" rx="6" fill="none" stroke="#00E5FF" stroke-width="2.5" opacity="0.8"/>
+    <text x="260" y="215" font-size="13" text-anchor="middle" fill="#00E5FF" font-weight="bold">10+ PROJECTS</text>
+    <text x="260" y="235" font-size="12" text-anchor="middle" fill="#A0AEC0">Created &amp; Deployed</text>
     
-    <!-- Box 2 -->
-    <rect x="400" y="245" width="200" height="65" rx="8" fill="none" stroke="#7C3AED" stroke-width="2" opacity="0.7"/>
-    <text x="500" y="268" font-size="14" text-anchor="middle" fill="#7C3AED" font-weight="bold">5+ LANGUAGES</text>
-    <text x="500" y="295" font-size="11" text-anchor="middle" fill="#A0AEC0">Expert Level</text>
+    <rect x="460" y="190" width="280" height="70" rx="6" fill="none" stroke="#7C3AED" stroke-width="2.5" opacity="0.8"/>
+    <text x="600" y="215" font-size="13" text-anchor="middle" fill="#7C3AED" font-weight="bold">5+ LANGUAGES</text>
+    <text x="600" y="235" font-size="12" text-anchor="middle" fill="#A0AEC0">Expert Level</text>
     
-    <!-- Box 3 -->
-    <rect x="650" y="245" width="200" height="65" rx="8" fill="none" stroke="#00E5FF" stroke-width="2" opacity="0.7"/>
-    <text x="750" y="268" font-size="14" text-anchor="middle" fill="#00E5FF" font-weight="bold">TECH DRIVEN</text>
-    <text x="750" y="295" font-size="11" text-anchor="middle" fill="#A0AEC0">Always Learning</text>
+    <rect x="800" y="190" width="280" height="70" rx="6" fill="none" stroke="#00E5FF" stroke-width="2.5" opacity="0.8"/>
+    <text x="940" y="215" font-size="13" text-anchor="middle" fill="#00E5FF" font-weight="bold">TECH DRIVEN</text>
+    <text x="940" y="235" font-size="12" text-anchor="middle" fill="#A0AEC0">Always Learning</text>
   </g>
 </svg>
 
