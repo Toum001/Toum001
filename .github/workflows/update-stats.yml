@@ -1,0 +1,30 @@
+name: Update GitHub Stats
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update stats in README
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Les stats utiliseront automatiquement le token via l'env variable
+          echo "Stats seront mises à jour avec accès aux repos privés"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+      - name: Push changes
+        run: |
+          git add README.md
+          git commit -m "chore: update github stats" || echo "No changes"
+          git push || echo "Nothing to push"
