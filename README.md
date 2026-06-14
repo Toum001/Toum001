@@ -1,85 +1,113 @@
 <div align="center">
 
-<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+<svg width="420" height="200" viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
   <!-- Fond -->
-  <rect width="400" height="300" fill="#0a0e27"/>
+  <rect width="420" height="200" fill="#0a0e27"/>
   
-  <!-- Cercle de fond -->
-  <circle cx="200" cy="150" r="200" fill="none" stroke="#667eea" stroke-width="1" opacity="0.15"/>
+  <!-- Grille de jours (commits) -->
+  <!-- Ligne 1 -->
+  <rect x="20" y="20" width="14" height="14" fill="#667eea" opacity="0.4" rx="2"/>
+  <rect x="38" y="20" width="14" height="14" fill="#667eea" opacity="0.5" rx="2"/>
+  <rect x="56" y="20" width="14" height="14" fill="#764ba2" opacity="0.6" rx="2"/>
+  <rect x="74" y="20" width="14" height="14" fill="#667eea" opacity="0.4" rx="2"/>
+  <rect x="92" y="20" width="14" height="14" fill="#f093fb" opacity="0.5" rx="2"/>
+  <rect x="110" y="20" width="14" height="14" fill="#667eea" opacity="0.6" rx="2"/>
+  <rect x="128" y="20" width="14" height="14" fill="#764ba2" opacity="0.4" rx="2"/>
+  <rect x="146" y="20" width="14" height="14" fill="#667eea" opacity="0.5" rx="2"/>
+  <rect x="164" y="20" width="14" height="14" fill="#f093fb" opacity="0.6" rx="2"/>
+  <rect x="182" y="20" width="14" height="14" fill="#667eea" opacity="0.4" rx="2"/>
+  <rect x="200" y="20" width="14" height="14" fill="#764ba2" opacity="0.5" rx="2"/>
+  <rect x="218" y="20" width="14" height="14" fill="#667eea" opacity="0.6" rx="2"/>
   
-  <!-- Cercles d'arrière-plan rotatifs -->
-  <circle cx="200" cy="150" r="150" fill="none" stroke="#764ba2" stroke-width="1" opacity="0.3">
-    <animateTransform attributeName="transform" type="rotate" from="0 200 150" to="360 200 150" dur="20s" repeatCount="indefinite"/>
+  <!-- Ligne 2 -->
+  <rect x="20" y="40" width="14" height="14" fill="#764ba2" opacity="0.5" rx="2"/>
+  <rect x="38" y="40" width="14" height="14" fill="#667eea" opacity="0.6" rx="2"/>
+  <rect x="56" y="40" width="14" height="14" fill="#f093fb" opacity="0.4" rx="2"/>
+  <rect x="74" y="40" width="14" height="14" fill="#667eea" opacity="0.5" rx="2"/>
+  <rect x="92" y="40" width="14" height="14" fill="#764ba2" opacity="0.6" rx="2"/>
+  <rect x="110" y="40" width="14" height="14" fill="#667eea" opacity="0.4" rx="2"/>
+  <rect x="128" y="40" width="14" height="14" fill="#f093fb" opacity="0.5" rx="2"/>
+  <rect x="146" y="40" width="14" height="14" fill="#667eea" opacity="0.6" rx="2"/>
+  <rect x="164" y="40" width="14" height="14" fill="#764ba2" opacity="0.4" rx="2"/>
+  <rect x="182" y="40" width="14" height="14" fill="#667eea" opacity="0.5" rx="2"/>
+  <rect x="200" y="40" width="14" height="14" fill="#f093fb" opacity="0.6" rx="2"/>
+  <rect x="218" y="40" width="14" height="14" fill="#667eea" opacity="0.4" rx="2"/>
+  
+  <!-- Ligne 3 -->
+  <rect x="20" y="60" width="14" height="14" fill="#667eea" opacity="0.6" rx="2"/>
+  <rect x="38" y="60" width="14" height="14" fill="#764ba2" opacity="0.4" rx="2"/>
+  <rect x="56" y="60" width="14" height="14" fill="#667eea" opacity="0.5" rx="2"/>
+  <rect x="74" y="60" width="14" height="14" fill="#f093fb" opacity="0.6" rx="2"/>
+  <rect x="92" y="60" width="14" height="14" fill="#667eea" opacity="0.4" rx="2"/>
+  <rect x="110" y="60" width="14" height="14" fill="#764ba2" opacity="0.5" rx="2"/>
+  <rect x="128" y="60" width="14" height="14" fill="#667eea" opacity="0.6" rx="2"/>
+  <rect x="146" y="60" width="14" height="14" fill="#f093fb" opacity="0.4" rx="2"/>
+  <rect x="164" y="60" width="14" height="14" fill="#667eea" opacity="0.5" rx="2"/>
+  <rect x="182" y="60" width="14" height="14" fill="#764ba2" opacity="0.6" rx="2"/>
+  <rect x="200" y="60" width="14" height="14" fill="#667eea" opacity="0.4" rx="2"/>
+  <rect x="218" y="60" width="14" height="14" fill="#f093fb" opacity="0.5" rx="2"/>
+  
+  <!-- Ligne 4 -->
+  <rect x="20" y="80" width="14" height="14" fill="#764ba2" opacity="0.6" rx="2"/>
+  <rect x="38" y="80" width="14" height="14" fill="#667eea" opacity="0.4" rx="2"/>
+  <rect x="56" y="80" width="14" height="14" fill="#f093fb" opacity="0.5" rx="2"/>
+  <rect x="74" y="80" width="14" height="14" fill="#667eea" opacity="0.6" rx="2"/>
+  <rect x="92" y="80" width="14" height="14" fill="#764ba2" opacity="0.4" rx="2"/>
+  <rect x="110" y="80" width="14" height="14" fill="#667eea" opacity="0.5" rx="2"/>
+  <rect x="128" y="80" width="14" height="14" fill="#f093fb" opacity="0.6" rx="2"/>
+  <rect x="146" y="80" width="14" height="14" fill="#667eea" opacity="0.4" rx="2"/>
+  <rect x="164" y="80" width="14" height="14" fill="#764ba2" opacity="0.5" rx="2"/>
+  <rect x="182" y="80" width="14" height="14" fill="#667eea" opacity="0.6" rx="2"/>
+  <rect x="200" y="80" width="14" height="14" fill="#f093fb" opacity="0.4" rx="2"/>
+  <rect x="218" y="80" width="14" height="14" fill="#667eea" opacity="0.5" rx="2"/>
+  
+  <!-- Ligne 5 -->
+  <rect x="20" y="100" width="14" height="14" fill="#667eea" opacity="0.5" rx="2"/>
+  <rect x="38" y="100" width="14" height="14" fill="#764ba2" opacity="0.6" rx="2"/>
+  <rect x="56" y="100" width="14" height="14" fill="#667eea" opacity="0.4" rx="2"/>
+  <rect x="74" y="100" width="14" height="14" fill="#f093fb" opacity="0.5" rx="2"/>
+  <rect x="92" y="100" width="14" height="14" fill="#667eea" opacity="0.6" rx="2"/>
+  <rect x="110" y="100" width="14" height="14" fill="#764ba2" opacity="0.4" rx="2"/>
+  <rect x="128" y="100" width="14" height="14" fill="#667eea" opacity="0.5" rx="2"/>
+  <rect x="146" y="100" width="14" height="14" fill="#f093fb" opacity="0.6" rx="2"/>
+  <rect x="164" y="100" width="14" height="14" fill="#667eea" opacity="0.4" rx="2"/>
+  <rect x="182" y="100" width="14" height="14" fill="#764ba2" opacity="0.5" rx="2"/>
+  <rect x="200" y="100" width="14" height="14" fill="#667eea" opacity="0.6" rx="2"/>
+  <rect x="218" y="100" width="14" height="14" fill="#f093fb" opacity="0.4" rx="2"/>
+  
+  <!-- Le serpent qui se déplace et grandit -->
+  <!-- Tête du serpent -->
+  <rect x="20" y="20" width="14" height="14" fill="#00ff00" opacity="0.9" rx="2">
+    <animate attributeName="x" from="20" to="218" dur="30s" repeatCount="indefinite" values="20; 38; 56; 74; 92; 110; 128; 146; 164; 182; 200; 218; 20; 38; 56; 74; 92; 110; 128; 146; 164; 182; 200; 218; 20" keyTimes="0; 0.04; 0.08; 0.12; 0.16; 0.2; 0.24; 0.28; 0.32; 0.36; 0.4; 0.42; 0.5; 0.54; 0.58; 0.62; 0.66; 0.7; 0.74; 0.78; 0.82; 0.86; 0.9; 0.96; 1"/>
+    <animate attributeName="y" from="20" to="20" dur="30s" repeatCount="indefinite" values="20; 20; 20; 20; 20; 20; 20; 20; 20; 20; 20; 20; 40; 40; 40; 40; 40; 40; 40; 40; 40; 40; 40; 40; 20" keyTimes="0; 0.04; 0.08; 0.12; 0.16; 0.2; 0.24; 0.28; 0.32; 0.36; 0.4; 0.42; 0.5; 0.54; 0.58; 0.62; 0.66; 0.7; 0.74; 0.78; 0.82; 0.86; 0.9; 0.96; 1"/>
+  </rect>
+  
+  <!-- Corps du serpent (segments) -->
+  <rect x="38" y="20" width="12" height="12" fill="#00dd00" opacity="0.7" rx="2">
+    <animate attributeName="x" from="38" to="218" dur="30s" repeatCount="indefinite" values="38; 56; 74; 92; 110; 128; 146; 164; 182; 200; 218; 20; 38; 56; 74; 92; 110; 128; 146; 164; 182; 200; 218; 20; 38" keyTimes="0; 0.04; 0.08; 0.12; 0.16; 0.2; 0.24; 0.28; 0.32; 0.36; 0.4; 0.42; 0.5; 0.54; 0.58; 0.62; 0.66; 0.7; 0.74; 0.78; 0.82; 0.86; 0.9; 0.96; 1"/>
+    <animate attributeName="y" from="20" to="20" dur="30s" repeatCount="indefinite" values="20; 20; 20; 20; 20; 20; 20; 20; 20; 20; 20; 40; 40; 40; 40; 40; 40; 40; 40; 40; 40; 40; 40; 60; 60" keyTimes="0; 0.04; 0.08; 0.12; 0.16; 0.2; 0.24; 0.28; 0.32; 0.36; 0.4; 0.42; 0.5; 0.54; 0.58; 0.62; 0.66; 0.7; 0.74; 0.78; 0.82; 0.86; 0.9; 0.96; 1"/>
+  </rect>
+  
+  <rect x="56" y="20" width="10" height="10" fill="#00bb00" opacity="0.6" rx="2">
+    <animate attributeName="x" from="56" to="218" dur="30s" repeatCount="indefinite" values="56; 74; 92; 110; 128; 146; 164; 182; 200; 218; 20; 38; 56; 74; 92; 110; 128; 146; 164; 182; 200; 218; 20; 38; 56" keyTimes="0; 0.04; 0.08; 0.12; 0.16; 0.2; 0.24; 0.28; 0.32; 0.36; 0.4; 0.42; 0.5; 0.54; 0.58; 0.62; 0.66; 0.7; 0.74; 0.78; 0.82; 0.86; 0.9; 0.96; 1"/>
+    <animate attributeName="y" from="20" to="40" dur="30s" repeatCount="indefinite" values="20; 20; 20; 20; 20; 20; 20; 20; 20; 20; 40; 40; 40; 40; 40; 40; 40; 40; 40; 40; 40; 40; 60; 60; 60" keyTimes="0; 0.04; 0.08; 0.12; 0.16; 0.2; 0.24; 0.28; 0.32; 0.36; 0.4; 0.42; 0.5; 0.54; 0.58; 0.62; 0.66; 0.7; 0.74; 0.78; 0.82; 0.86; 0.9; 0.96; 1"/>
+  </rect>
+  
+  <!-- Effet de manger (éclairs) -->
+  <circle cx="20" cy="20" r="7" fill="#ffff00" opacity="0">
+    <animate attributeName="opacity" from="1" to="0" dur="0.3s" repeatCount="indefinite" begin="0s; 3s; 6s; 9s; 12s; 15s; 18s; 21s; 24s; 27s"/>
+    <animate attributeName="r" from="5" to="12" dur="0.3s" repeatCount="indefinite" begin="0s; 3s; 6s; 9s; 12s; 15s; 18s; 21s; 24s; 27s"/>
   </circle>
-  <circle cx="200" cy="150" r="120" fill="none" stroke="#f093fb" stroke-width="1" opacity="0.2">
-    <animateTransform attributeName="transform" type="rotate" from="360 200 150" to="0 200 150" dur="25s" repeatCount="indefinite"/>
-  </circle>
   
-  <!-- Points orbitaux rotatifs -->
-  <g>
-    <animateTransform attributeName="transform" type="rotate" from="0 200 150" to="360 200 150" dur="15s" repeatCount="indefinite"/>
-    <circle cx="200" cy="30" r="6" fill="#667eea" opacity="0.9">
-      <animate attributeName="r" from="5" to="8" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="320" cy="150" r="6" fill="#764ba2" opacity="0.9">
-      <animate attributeName="r" from="5" to="8" dur="2s" begin="0.5s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="200" cy="270" r="6" fill="#f093fb" opacity="0.9">
-      <animate attributeName="r" from="5" to="8" dur="2s" begin="1s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="80" cy="150" r="6" fill="#667eea" opacity="0.9">
-      <animate attributeName="r" from="5" to="8" dur="2s" begin="1.5s" repeatCount="indefinite"/>
-    </circle>
-  </g>
+  <!-- Texte -->
+  <text x="280" y="60" font-size="36" font-weight="bold" fill="#00ff00" font-family="Arial, sans-serif">🐍</text>
+  <text x="320" y="60" font-size="14" fill="#667eea" font-family="Arial, sans-serif">Commits</text>
   
-  <!-- Lignes de connexion -->
-  <g opacity="0.5" stroke="#667eea" stroke-width="1.5">
-    <line x1="200" y1="150" x2="200" y2="30"/>
-    <line x1="200" y1="150" x2="320" y2="150"/>
-    <line x1="200" y1="150" x2="200" y2="270"/>
-    <line x1="200" y1="150" x2="80" y2="150"/>
-  </g>
-  
-  <!-- Formes flottantes -->
-  <polygon points="200,80 220,110 180,110" fill="#667eea" opacity="0.6">
-    <animateTransform attributeName="transform" type="translate" from="0 0" to="0 -15" dur="3s" repeatCount="indefinite" values="0 0; 0 -15; 0 0" keyTimes="0; 0.5; 1"/>
-  </polygon>
-  
-  <polygon points="280,140 310,160 280,180 250,160" fill="#764ba2" opacity="0.6">
-    <animateTransform attributeName="transform" type="translate" from="0 0" to="0 -15" dur="3.5s" begin="0.5s" repeatCount="indefinite" values="0 0; 0 -15; 0 0" keyTimes="0; 0.5; 1"/>
-  </polygon>
-  
-  <polygon points="200,220 220,250 180,250" fill="#f093fb" opacity="0.6">
-    <animateTransform attributeName="transform" type="translate" from="0 0" to="0 -15" dur="4s" begin="1s" repeatCount="indefinite" values="0 0; 0 -15; 0 0" keyTimes="0; 0.5; 1"/>
-  </polygon>
-  
-  <!-- Halo central -->
-  <circle cx="200" cy="150" r="40" fill="none" stroke="#667eea" stroke-width="2" opacity="0.5">
-    <animate attributeName="opacity" from="0.3" to="0.8" dur="2s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="200" cy="150" r="40" fill="none" stroke="#764ba2" stroke-width="1" opacity="0.3">
-    <animate attributeName="r" from="35" to="45" dur="2s" repeatCount="indefinite"/>
-  </circle>
-  
-  <!-- Points de lumière supplémentaires -->
-  <circle cx="120" cy="80" r="3" fill="#f093fb" opacity="0.6">
-    <animate attributeName="opacity" from="0.3" to="1" dur="2s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="280" cy="80" r="3" fill="#667eea" opacity="0.6">
-    <animate attributeName="opacity" from="0.3" to="1" dur="2s" begin="0.5s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="280" cy="220" r="3" fill="#764ba2" opacity="0.6">
-    <animate attributeName="opacity" from="0.3" to="1" dur="2s" begin="1s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="120" cy="220" r="3" fill="#f093fb" opacity="0.6">
-    <animate attributeName="opacity" from="0.3" to="1" dur="2s" begin="1.5s" repeatCount="indefinite"/>
-  </circle>
-  
-  <!-- Texte principal -->
-  <text x="200" y="165" font-size="48" font-weight="bold" text-anchor="middle" fill="#667eea" font-family="Arial, sans-serif" letter-spacing="2">TOUM001</text>
-  
-  <!-- Texte secondaire -->
-  <text x="200" y="195" font-size="14" text-anchor="middle" fill="#764ba2" opacity="0.9" font-family="Arial, sans-serif">Developer • Innovation</text>
+  <!-- Compteur de commits mangés -->
+  <text x="280" y="120" font-size="48" font-weight="bold" fill="#f093fb" text-anchor="middle" font-family="Arial, sans-serif">
+    <animate attributeName="text-content" values="0; 5; 10; 15; 20; 25; 30; 35; 40; 42; 40; 35; 30" dur="30s" repeatCount="indefinite"/>
+    42
+  </text>
 </svg>
 
 # 👋 Bienvenue sur mon profil !
