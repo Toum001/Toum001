@@ -124,7 +124,7 @@ Je suis un développeur passionné par la création de projets innovants et l'ex
 
 <div align="center">
 
-![GitHub stats](https://github-readme-stats.vercel.app/api?username=Toum001&show_icons=true&theme=tokyonight&hide_border=true)
+![GitHub stats](https://github-readme-stats.vercel.app/api?username=Toum001&show_icons=true&theme=tokyonight&hide_border=true&date_range=current_year)
 
 ![Langages](https://github-readme-stats.vercel.app/api/top-langs/?username=Toum001&layout=compact&theme=tokyonight&hide_border=true)
 
