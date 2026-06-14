@@ -2,21 +2,6 @@
 
 <svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <style>
-      @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-      @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
-      @keyframes glow { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
-      @keyframes pulse { 0%, 100% { r: 4px; } 50% { r: 7px; } }
-      @keyframes shimmer { 0% { stroke-dashoffset: 1000; } 100% { stroke-dashoffset: 0; } }
-      
-      .rotating { animation: rotate 20s linear infinite; transform-origin: 200px 150px; }
-      .floating { animation: float 3s ease-in-out infinite; }
-      .glowing { animation: glow 2s ease-in-out infinite; }
-      .pulsing { animation: pulse 2s ease-in-out infinite; }
-      .shimmering { animation: shimmer 3s linear infinite; stroke-dasharray: 1000; }
-    </style>
-    
-    <!-- Gradients -->
     <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%">
       <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.1" />
       <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.05" />
@@ -38,20 +23,35 @@
   <rect width="400" height="300" fill="#0a0e27"/>
   <circle cx="200" cy="150" r="200" fill="url(#bgGradient)"/>
   
-  <!-- Cercles d'arrière-plan -->
-  <circle class="rotating" cx="200" cy="150" r="150" fill="none" stroke="url(#mainGradient)" stroke-width="1" opacity="0.3"/>
-  <circle class="rotating" cx="200" cy="150" r="120" fill="none" stroke="url(#accentGradient)" stroke-width="1" opacity="0.2" style="animation-direction: reverse;"/>
-  
-  <!-- Points orbitaux qui tournent -->
-  <g class="rotating">
-    <circle cx="200" cy="30" r="6" fill="#667eea" class="pulsing" opacity="0.8"/>
-    <circle cx="320" cy="150" r="6" fill="#764ba2" class="pulsing" opacity="0.8" style="animation-delay: 0.5s;"/>
-    <circle cx="200" cy="270" r="6" fill="#f093fb" class="pulsing" opacity="0.8" style="animation-delay: 1s;"/>
-    <circle cx="80" cy="150" r="6" fill="#667eea" class="pulsing" opacity="0.8" style="animation-delay: 1.5s;"/>
+  <!-- Cercles d'arrière-plan rotatifs -->
+  <g transform-origin="200px 150px">
+    <circle cx="200" cy="150" r="150" fill="none" stroke="url(#mainGradient)" stroke-width="1" opacity="0.3">
+      <animateTransform attributeName="transform" type="rotate" from="0 200 150" to="360 200 150" dur="20s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="150" r="120" fill="none" stroke="url(#accentGradient)" stroke-width="1" opacity="0.2">
+      <animateTransform attributeName="transform" type="rotate" from="360 200 150" to="0 200 150" dur="25s" repeatCount="indefinite"/>
+    </circle>
   </g>
   
-  <!-- Lignes de connexion animées -->
-  <g opacity="0.4" stroke="url(#mainGradient)" stroke-width="1.5" class="shimmering">
+  <!-- Points orbitaux rotatifs -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0 200 150" to="360 200 150" dur="15s" repeatCount="indefinite"/>
+    <circle cx="200" cy="30" r="6" fill="#667eea" opacity="0.8">
+      <animate attributeName="r" from="5" to="8" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="320" cy="150" r="6" fill="#764ba2" opacity="0.8">
+      <animate attributeName="r" from="5" to="8" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="270" r="6" fill="#f093fb" opacity="0.8">
+      <animate attributeName="r" from="5" to="8" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="80" cy="150" r="6" fill="#667eea" opacity="0.8">
+      <animate attributeName="r" from="5" to="8" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Lignes de connexion -->
+  <g opacity="0.4" stroke="url(#mainGradient)" stroke-width="1.5">
     <line x1="200" y1="150" x2="200" y2="30"/>
     <line x1="200" y1="150" x2="320" y2="150"/>
     <line x1="200" y1="150" x2="200" y2="270"/>
@@ -59,33 +59,42 @@
   </g>
   
   <!-- Formes flottantes -->
-  <g class="floating" opacity="0.6">
-    <polygon points="200,80 220,110 180,110" fill="url(#mainGradient)" opacity="0.7"/>
-  </g>
+  <polygon points="200,80 220,110 180,110" fill="url(#mainGradient)" opacity="0.7">
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="0 -15" dur="3s" repeatCount="indefinite" values="0 0; 0 -15; 0 0" keyTimes="0; 0.5; 1"/>
+  </polygon>
   
-  <g class="floating" style="animation-delay: 0.5s;" opacity="0.6">
-    <polygon points="280,140 310,160 280,180 250,160" fill="url(#accentGradient)" opacity="0.7"/>
-  </g>
+  <polygon points="280,140 310,160 280,180 250,160" fill="url(#accentGradient)" opacity="0.7">
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="0 -15" dur="3.5s" begin="0.5s" repeatCount="indefinite" values="0 0; 0 -15; 0 0" keyTimes="0; 0.5; 1"/>
+  </polygon>
   
-  <g class="floating" style="animation-delay: 1s;" opacity="0.6">
-    <polygon points="200,220 220,250 180,250" fill="url(#mainGradient)" opacity="0.7" transform="rotate(180 200 235)"/>
-  </g>
+  <polygon points="200,220 220,250 180,250" fill="url(#mainGradient)" opacity="0.7">
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="0 -15" dur="4s" begin="1s" repeatCount="indefinite" values="0 0; 0 -15; 0 0" keyTimes="0; 0.5; 1"/>
+  </polygon>
   
   <!-- Halo central -->
-  <circle cx="200" cy="150" r="40" fill="none" stroke="url(#mainGradient)" stroke-width="2" opacity="0.5" class="glowing"/>
-  <circle cx="200" cy="150" r="35" fill="none" stroke="url(#accentGradient)" stroke-width="1" opacity="0.3"/>
+  <circle cx="200" cy="150" r="40" fill="none" stroke="url(#mainGradient)" stroke-width="2" opacity="0.5">
+    <animate attributeName="opacity" from="0.3" to="0.7" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Points de lumière -->
+  <circle cx="120" cy="80" r="3" fill="#f093fb" opacity="0.6">
+    <animate attributeName="opacity" from="0.3" to="1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="280" cy="80" r="3" fill="#667eea" opacity="0.6">
+    <animate attributeName="opacity" from="0.3" to="1" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="280" cy="220" r="3" fill="#764ba2" opacity="0.6">
+    <animate attributeName="opacity" from="0.3" to="1" dur="2s" begin="1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="120" cy="220" r="3" fill="#f093fb" opacity="0.6">
+    <animate attributeName="opacity" from="0.3" to="1" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+  </circle>
   
   <!-- Texte principal -->
   <text x="200" y="165" font-size="48" font-weight="bold" text-anchor="middle" fill="url(#mainGradient)" font-family="Arial, sans-serif" letter-spacing="2">TOUM001</text>
   
   <!-- Texte secondaire -->
   <text x="200" y="195" font-size="14" text-anchor="middle" fill="#667eea" opacity="0.8" font-family="Arial, sans-serif">Developer • Innovation</text>
-  
-  <!-- Points de lumière supplémentaires -->
-  <circle cx="120" cy="80" r="3" fill="#f093fb" class="glowing" opacity="0.6"/>
-  <circle cx="280" cy="80" r="3" fill="#667eea" class="glowing" opacity="0.6" style="animation-delay: 0.5s;"/>
-  <circle cx="280" cy="220" r="3" fill="#764ba2" class="glowing" opacity="0.6" style="animation-delay: 1s;"/>
-  <circle cx="120" cy="220" r="3" fill="#f093fb" class="glowing" opacity="0.6" style="animation-delay: 1.5s;"/>
 </svg>
 
 # 👋 Bienvenue sur mon profil !
