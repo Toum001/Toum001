@@ -1,34 +1,30 @@
 <div align="center">
 
-<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<svg width="300" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
   <style>
-    @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
-    @keyframes slide { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
-    .rotating { animation: rotate 20s linear infinite; }
-    .pulsing { animation: pulse 2s ease-in-out infinite; }
-    .sliding { animation: slide 3s linear infinite; }
+    @keyframes wave1 { 0% { d: path("M0,75 Q75,50 150,75 T300,75 L300,150 L0,150 Z"); } 50% { d: path("M0,75 Q75,100 150,75 T300,75 L300,150 L0,150 Z"); } 100% { d: path("M0,75 Q75,50 150,75 T300,75 L300,150 L0,150 Z"); } }
+    @keyframes wave2 { 0% { d: path("M0,85 Q75,60 150,85 T300,85 L300,150 L0,150 Z"); } 50% { d: path("M0,85 Q75,110 150,85 T300,85 L300,150 L0,150 Z"); } 100% { d: path("M0,85 Q75,60 150,85 T300,85 L300,150 L0,150 Z"); } }
+    @keyframes wave3 { 0% { d: path("M0,95 Q75,70 150,95 T300,95 L300,150 L0,150 Z"); } 50% { d: path("M0,95 Q75,120 150,95 T300,95 L300,150 L0,150 Z"); } 100% { d: path("M0,95 Q75,70 150,95 T300,95 L300,150 L0,150 Z"); } }
+    .wave1 { animation: wave1 4s ease-in-out infinite; }
+    .wave2 { animation: wave2 5s ease-in-out infinite; animation-delay: -1s; }
+    .wave3 { animation: wave3 6s ease-in-out infinite; animation-delay: -2s; }
   </style>
   
-  <!-- Cercle externe qui tourne -->
-  <circle class="rotating" cx="100" cy="100" r="95" fill="none" stroke="url(#gradient)" stroke-width="3" transform-origin="100px 100px"/>
-  
-  <!-- Gradient -->
   <defs>
     <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
     </linearGradient>
   </defs>
   
-  <!-- Points qui clignotent -->
-  <circle class="pulsing" cx="100" cy="30" r="8" fill="#667eea"/>
-  <circle class="pulsing" cx="160" cy="100" r="8" fill="#764ba2" style="animation-delay: 0.5s;"/>
-  <circle class="pulsing" cx="100" cy="170" r="8" fill="#667eea" style="animation-delay: 1s;"/>
-  <circle class="pulsing" cx="40" cy="100" r="8" fill="#764ba2" style="animation-delay: 1.5s;"/>
+  <!-- Vagues ondulantes -->
+  <path class="wave1" fill="url(#gradient)" opacity="0.8" d="M0,75 Q75,50 150,75 T300,75 L300,150 L0,150 Z"/>
+  <path class="wave2" fill="url(#gradient)" opacity="0.6" d="M0,85 Q75,60 150,85 T300,85 L300,150 L0,150 Z"/>
+  <path class="wave3" fill="url(#gradient)" opacity="0.4" d="M0,95 Q75,70 150,95 T300,95 L300,150 L0,150 Z"/>
   
-  <!-- Texte central -->
-  <text x="100" y="110" font-size="32" font-weight="bold" text-anchor="middle" fill="#667eea">T</text>
+  <!-- Texte -->
+  <text x="150" y="50" font-size="28" font-weight="bold" text-anchor="middle" fill="#667eea">TOUM001</text>
 </svg>
 
 # 👋 Bienvenue sur mon profil !
