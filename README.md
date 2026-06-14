@@ -1,30 +1,91 @@
 <div align="center">
 
-<svg width="300" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    @keyframes wave1 { 0% { d: path("M0,75 Q75,50 150,75 T300,75 L300,150 L0,150 Z"); } 50% { d: path("M0,75 Q75,100 150,75 T300,75 L300,150 L0,150 Z"); } 100% { d: path("M0,75 Q75,50 150,75 T300,75 L300,150 L0,150 Z"); } }
-    @keyframes wave2 { 0% { d: path("M0,85 Q75,60 150,85 T300,85 L300,150 L0,150 Z"); } 50% { d: path("M0,85 Q75,110 150,85 T300,85 L300,150 L0,150 Z"); } 100% { d: path("M0,85 Q75,60 150,85 T300,85 L300,150 L0,150 Z"); } }
-    @keyframes wave3 { 0% { d: path("M0,95 Q75,70 150,95 T300,95 L300,150 L0,150 Z"); } 50% { d: path("M0,95 Q75,120 150,95 T300,95 L300,150 L0,150 Z"); } 100% { d: path("M0,95 Q75,70 150,95 T300,95 L300,150 L0,150 Z"); } }
-    .wave1 { animation: wave1 4s ease-in-out infinite; }
-    .wave2 { animation: wave2 5s ease-in-out infinite; animation-delay: -1s; }
-    .wave3 { animation: wave3 6s ease-in-out infinite; animation-delay: -2s; }
-  </style>
-  
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
+    <style>
+      @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+      @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
+      @keyframes glow { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
+      @keyframes pulse { 0%, 100% { r: 4px; } 50% { r: 7px; } }
+      @keyframes shimmer { 0% { stroke-dashoffset: 1000; } 100% { stroke-dashoffset: 0; } }
+      
+      .rotating { animation: rotate 20s linear infinite; transform-origin: 200px 150px; }
+      .floating { animation: float 3s ease-in-out infinite; }
+      .glowing { animation: glow 2s ease-in-out infinite; }
+      .pulsing { animation: pulse 2s ease-in-out infinite; }
+      .shimmering { animation: shimmer 3s linear infinite; stroke-dasharray: 1000; }
+    </style>
+    
+    <!-- Gradients -->
+    <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.05" />
+    </radialGradient>
+    
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea" />
+      <stop offset="50%" style="stop-color:#764ba2" />
+      <stop offset="100%" style="stop-color:#f093fb" />
+    </linearGradient>
+    
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb" />
+      <stop offset="100%" style="stop-color:#667eea" />
     </linearGradient>
   </defs>
   
-  <!-- Vagues ondulantes -->
-  <path class="wave1" fill="url(#gradient)" opacity="0.8" d="M0,75 Q75,50 150,75 T300,75 L300,150 L0,150 Z"/>
-  <path class="wave2" fill="url(#gradient)" opacity="0.6" d="M0,85 Q75,60 150,85 T300,85 L300,150 L0,150 Z"/>
-  <path class="wave3" fill="url(#gradient)" opacity="0.4" d="M0,95 Q75,70 150,95 T300,95 L300,150 L0,150 Z"/>
+  <!-- Fond -->
+  <rect width="400" height="300" fill="#0a0e27"/>
+  <circle cx="200" cy="150" r="200" fill="url(#bgGradient)"/>
   
-  <!-- Texte -->
-  <text x="150" y="50" font-size="28" font-weight="bold" text-anchor="middle" fill="#667eea">TOUM001</text>
+  <!-- Cercles d'arrière-plan -->
+  <circle class="rotating" cx="200" cy="150" r="150" fill="none" stroke="url(#mainGradient)" stroke-width="1" opacity="0.3"/>
+  <circle class="rotating" cx="200" cy="150" r="120" fill="none" stroke="url(#accentGradient)" stroke-width="1" opacity="0.2" style="animation-direction: reverse;"/>
+  
+  <!-- Points orbitaux qui tournent -->
+  <g class="rotating">
+    <circle cx="200" cy="30" r="6" fill="#667eea" class="pulsing" opacity="0.8"/>
+    <circle cx="320" cy="150" r="6" fill="#764ba2" class="pulsing" opacity="0.8" style="animation-delay: 0.5s;"/>
+    <circle cx="200" cy="270" r="6" fill="#f093fb" class="pulsing" opacity="0.8" style="animation-delay: 1s;"/>
+    <circle cx="80" cy="150" r="6" fill="#667eea" class="pulsing" opacity="0.8" style="animation-delay: 1.5s;"/>
+  </g>
+  
+  <!-- Lignes de connexion animées -->
+  <g opacity="0.4" stroke="url(#mainGradient)" stroke-width="1.5" class="shimmering">
+    <line x1="200" y1="150" x2="200" y2="30"/>
+    <line x1="200" y1="150" x2="320" y2="150"/>
+    <line x1="200" y1="150" x2="200" y2="270"/>
+    <line x1="200" y1="150" x2="80" y2="150"/>
+  </g>
+  
+  <!-- Formes flottantes -->
+  <g class="floating" opacity="0.6">
+    <polygon points="200,80 220,110 180,110" fill="url(#mainGradient)" opacity="0.7"/>
+  </g>
+  
+  <g class="floating" style="animation-delay: 0.5s;" opacity="0.6">
+    <polygon points="280,140 310,160 280,180 250,160" fill="url(#accentGradient)" opacity="0.7"/>
+  </g>
+  
+  <g class="floating" style="animation-delay: 1s;" opacity="0.6">
+    <polygon points="200,220 220,250 180,250" fill="url(#mainGradient)" opacity="0.7" transform="rotate(180 200 235)"/>
+  </g>
+  
+  <!-- Halo central -->
+  <circle cx="200" cy="150" r="40" fill="none" stroke="url(#mainGradient)" stroke-width="2" opacity="0.5" class="glowing"/>
+  <circle cx="200" cy="150" r="35" fill="none" stroke="url(#accentGradient)" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Texte principal -->
+  <text x="200" y="165" font-size="48" font-weight="bold" text-anchor="middle" fill="url(#mainGradient)" font-family="Arial, sans-serif" letter-spacing="2">TOUM001</text>
+  
+  <!-- Texte secondaire -->
+  <text x="200" y="195" font-size="14" text-anchor="middle" fill="#667eea" opacity="0.8" font-family="Arial, sans-serif">Developer • Innovation</text>
+  
+  <!-- Points de lumière supplémentaires -->
+  <circle cx="120" cy="80" r="3" fill="#f093fb" class="glowing" opacity="0.6"/>
+  <circle cx="280" cy="80" r="3" fill="#667eea" class="glowing" opacity="0.6" style="animation-delay: 0.5s;"/>
+  <circle cx="280" cy="220" r="3" fill="#764ba2" class="glowing" opacity="0.6" style="animation-delay: 1s;"/>
+  <circle cx="120" cy="220" r="3" fill="#f093fb" class="glowing" opacity="0.6" style="animation-delay: 1.5s;"/>
 </svg>
 
 # 👋 Bienvenue sur mon profil !
