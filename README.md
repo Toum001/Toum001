@@ -4,40 +4,102 @@
 <!-- HERO SECTION WITH ANIMATED SVG -->
 <!-- ============================================================================= -->
 
-<svg viewBox="0 0 1200 280" xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" style="max-width: 100%; margin: 20px 0;">
+<svg viewBox="0 0 1200 320" xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" style="max-width: 100%; margin: 30px 0; display: block;">
   <defs>
-    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#00E5FF;stop-opacity:0.12" />
-      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:0.08" />
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F172A"/>
+      <stop offset="50%" style="stop-color:#1a2a4a"/>
+      <stop offset="100%" style="stop-color:#0F172A"/>
     </linearGradient>
+    
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00E5FF"/>
+      <stop offset="100%" style="stop-color:#7C3AED"/>
+    </linearGradient>
+    
+    <linearGradient id="box1Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00E5FF;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#00E5FF;stop-opacity:0"/>
+    </linearGradient>
+    
+    <linearGradient id="box2Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#7C3AED;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:0"/>
+    </linearGradient>
+    
+    <linearGradient id="box3Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00E5FF;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#00E5FF;stop-opacity:0"/>
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
   
-  <rect width="1200" height="280" fill="#0F172A"/>
-  <rect width="1200" height="280" fill="url(#heroGrad)"/>
+  <!-- Fond principal -->
+  <rect width="1200" height="320" fill="url(#bgGrad)"/>
   
-  <circle cx="100" cy="50" r="40" fill="none" stroke="#00E5FF" stroke-width="1" opacity="0.15"/>
-  <circle cx="1100" cy="230" r="50" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.15"/>
+  <!-- Lignes de grille en arrière-plan -->
+  <g stroke="#00E5FF" stroke-width="0.5" opacity="0.08">
+    <line x1="0" y1="80" x2="1200" y2="80"/>
+    <line x1="0" y1="160" x2="1200" y2="160"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+  </g>
   
-  <text x="600" y="65" font-size="64" font-weight="900" text-anchor="middle" fill="#00E5FF" font-family="monospace">TOUM001</text>
+  <!-- Formes décoratives flottantes -->
+  <circle cx="80" cy="60" r="45" fill="none" stroke="#00E5FF" stroke-width="1.5" opacity="0.2"/>
+  <circle cx="80" cy="60" r="30" fill="none" stroke="#00E5FF" stroke-width="1" opacity="0.15"/>
   
-  <text x="600" y="120" font-size="24" text-anchor="middle" fill="#00E5FF" font-family="monospace" opacity="0.95">Full-Stack Developer • AI/ML Enthusiast</text>
+  <circle cx="1120" cy="260" r="55" fill="none" stroke="#7C3AED" stroke-width="1.5" opacity="0.2"/>
+  <circle cx="1120" cy="260" r="35" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.15"/>
   
-  <text x="600" y="155" font-size="14" text-anchor="middle" fill="#A0AEC0">Building innovative solutions with modern tech</text>
+  <!-- Rectangles décoratifs -->
+  <rect x="50" y="270" width="60" height="30" fill="none" stroke="#00E5FF" stroke-width="1.5" opacity="0.15" transform="rotate(-15 80 285)"/>
+  <rect x="1090" y="20" width="70" height="40" fill="none" stroke="#7C3AED" stroke-width="1.5" opacity="0.15" transform="rotate(25 1125 40)"/>
   
-  <line x1="250" y1="170" x2="950" y2="170" stroke="#00E5FF" stroke-width="1.5" opacity="0.3"/>
+  <!-- Titre principal -->
+  <text x="600" y="75" font-size="72" font-weight="900" text-anchor="middle" fill="url(#titleGrad)" font-family="monospace" filter="url(#glow)">TOUM001</text>
   
-  <g id="boxes">
-    <rect x="120" y="190" width="280" height="70" rx="6" fill="none" stroke="#00E5FF" stroke-width="2.5" opacity="0.8"/>
-    <text x="260" y="215" font-size="13" text-anchor="middle" fill="#00E5FF" font-weight="bold">10+ PROJECTS</text>
-    <text x="260" y="235" font-size="12" text-anchor="middle" fill="#A0AEC0">Created &amp; Deployed</text>
+  <!-- Sous-titre -->
+  <text x="600" y="130" font-size="26" text-anchor="middle" fill="#00E5FF" font-family="monospace" font-weight="bold" opacity="0.95">Full-Stack Developer • AI/ML Enthusiast</text>
+  
+  <!-- Description -->
+  <text x="600" y="160" font-size="15" text-anchor="middle" fill="#A0AEC0" font-family="Arial, sans-serif">Building innovative solutions with modern tech stack</text>
+  
+  <!-- Ligne décorative premium -->
+  <g opacity="0.4">
+    <line x1="200" y1="175" x2="1000" y2="175" stroke="#00E5FF" stroke-width="2"/>
+    <line x1="200" y1="177" x2="1000" y2="177" stroke="#7C3AED" stroke-width="1" opacity="0.6"/>
+  </g>
+  
+  <!-- Stat boxes avec gradients -->
+  <g id="stat-boxes">
+    <!-- Box 1 -->
+    <rect x="100" y="205" width="310" height="85" rx="12" fill="url(#box1Grad)" stroke="#00E5FF" stroke-width="2.5" opacity="0.9"/>
+    <rect x="105" y="210" width="300" height="75" rx="10" fill="none" stroke="#00E5FF" stroke-width="1" opacity="0.3"/>
+    <text x="255" y="240" font-size="16" font-weight="bold" text-anchor="middle" fill="#00E5FF" font-family="Arial, sans-serif">10+ PROJECTS</text>
+    <text x="255" y="262" font-size="12" text-anchor="middle" fill="#A0AEC0" font-family="Arial, sans-serif" opacity="0.9">Created &amp; Deployed</text>
+    <text x="255" y="278" font-size="10" text-anchor="middle" fill="#A0AEC0" font-family="Arial, sans-serif" opacity="0.6">Production Ready</text>
     
-    <rect x="460" y="190" width="280" height="70" rx="6" fill="none" stroke="#7C3AED" stroke-width="2.5" opacity="0.8"/>
-    <text x="600" y="215" font-size="13" text-anchor="middle" fill="#7C3AED" font-weight="bold">5+ LANGUAGES</text>
-    <text x="600" y="235" font-size="12" text-anchor="middle" fill="#A0AEC0">Expert Level</text>
+    <!-- Box 2 -->
+    <rect x="445" y="205" width="310" height="85" rx="12" fill="url(#box2Grad)" stroke="#7C3AED" stroke-width="2.5" opacity="0.9"/>
+    <rect x="450" y="210" width="300" height="75" rx="10" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.3"/>
+    <text x="600" y="240" font-size="16" font-weight="bold" text-anchor="middle" fill="#7C3AED" font-family="Arial, sans-serif">5+ LANGUAGES</text>
+    <text x="600" y="262" font-size="12" text-anchor="middle" fill="#A0AEC0" font-family="Arial, sans-serif" opacity="0.9">Expert Level</text>
+    <text x="600" y="278" font-size="10" text-anchor="middle" fill="#A0AEC0" font-family="Arial, sans-serif" opacity="0.6">Mastered Concepts</text>
     
-    <rect x="800" y="190" width="280" height="70" rx="6" fill="none" stroke="#00E5FF" stroke-width="2.5" opacity="0.8"/>
-    <text x="940" y="215" font-size="13" text-anchor="middle" fill="#00E5FF" font-weight="bold">TECH DRIVEN</text>
-    <text x="940" y="235" font-size="12" text-anchor="middle" fill="#A0AEC0">Always Learning</text>
+    <!-- Box 3 -->
+    <rect x="790" y="205" width="310" height="85" rx="12" fill="url(#box3Grad)" stroke="#00E5FF" stroke-width="2.5" opacity="0.9"/>
+    <rect x="795" y="210" width="300" height="75" rx="10" fill="none" stroke="#00E5FF" stroke-width="1" opacity="0.3"/>
+    <text x="945" y="240" font-size="16" font-weight="bold" text-anchor="middle" fill="#00E5FF" font-family="Arial, sans-serif">TECH DRIVEN</text>
+    <text x="945" y="262" font-size="12" text-anchor="middle" fill="#A0AEC0" font-family="Arial, sans-serif" opacity="0.9">Always Learning</text>
+    <text x="945" y="278" font-size="10" text-anchor="middle" fill="#A0AEC0" font-family="Arial, sans-serif" opacity="0.6">Innovation Focused</text>
   </g>
 </svg>
 
