@@ -1,39 +1,67 @@
 <div align="center">
 
 <!-- ============================================================================= -->
-<!-- HERO SECTION WITH ANIMATED SVG -->
+<!-- PREMIUM HERO SECTION WITH ANIMATIONS -->
 <!-- ============================================================================= -->
 
-<svg viewBox="0 0 1200 320" xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" style="max-width: 100%; margin: 30px 0; display: block;">
+<svg viewBox="0 0 1400 450" xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" style="max-width: 100%; margin: 40px 0;">
   <defs>
-    <!-- Gradients -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Background Gradients -->
+    <radialGradient id="bgRadial" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" style="stop-color:#1E3A5F;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#0F172A;stop-opacity:0"/>
+    </radialGradient>
+    
+    <linearGradient id="bgLinear" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#0F172A"/>
-      <stop offset="50%" style="stop-color:#1a2a4a"/>
+      <stop offset="50%" style="stop-color:#0F1e3e"/>
       <stop offset="100%" style="stop-color:#0F172A"/>
     </linearGradient>
     
-    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Title Gradient -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#00E5FF"/>
-      <stop offset="100%" style="stop-color:#7C3AED"/>
+      <stop offset="50%" style="stop-color:#7C3AED"/>
+      <stop offset="100%" style="stop-color:#00E5FF"/>
     </linearGradient>
     
-    <linearGradient id="box1Grad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#00E5FF;stop-opacity:0.2"/>
-      <stop offset="100%" style="stop-color:#00E5FF;stop-opacity:0"/>
+    <!-- Box Gradients -->
+    <linearGradient id="boxGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00E5FF;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#0F172A;stop-opacity:0.5"/>
     </linearGradient>
     
-    <linearGradient id="box2Grad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#7C3AED;stop-opacity:0.2"/>
-      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:0"/>
+    <linearGradient id="boxGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7C3AED;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#0F172A;stop-opacity:0.5"/>
     </linearGradient>
     
-    <linearGradient id="box3Grad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#00E5FF;stop-opacity:0.2"/>
-      <stop offset="100%" style="stop-color:#00E5FF;stop-opacity:0"/>
+    <linearGradient id="boxGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00E5FF;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#0F172A;stop-opacity:0.5"/>
     </linearGradient>
     
-    <filter id="glow">
+    <!-- Animations -->
+    <style>
+      @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-15px); } }
+      @keyframes pulse { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
+      @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+      
+      .floating { animation: float 4s ease-in-out infinite; transform-origin: center; }
+      .pulsing { animation: pulse 3s ease-in-out infinite; }
+      .rotating { animation: rotate 20s linear infinite; transform-origin: center; }
+    </style>
+    
+    <!-- Glow Filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
@@ -42,75 +70,114 @@
     </filter>
   </defs>
   
-  <!-- Fond principal -->
-  <rect width="1200" height="320" fill="url(#bgGrad)"/>
+  <!-- Background -->
+  <rect width="1400" height="450" fill="url(#bgLinear)"/>
+  <rect width="1400" height="450" fill="url(#bgRadial)"/>
   
-  <!-- Lignes de grille en arrière-plan -->
-  <g stroke="#00E5FF" stroke-width="0.5" opacity="0.08">
-    <line x1="0" y1="80" x2="1200" y2="80"/>
-    <line x1="0" y1="160" x2="1200" y2="160"/>
-    <line x1="0" y1="240" x2="1200" y2="240"/>
+  <!-- Animated Background Elements -->
+  <g class="floating" style="animation-delay: 0s;">
+    <circle cx="150" cy="100" r="70" fill="none" stroke="#00E5FF" stroke-width="1" opacity="0.15"/>
+    <circle cx="150" cy="100" r="50" fill="none" stroke="#00E5FF" stroke-width="0.5" opacity="0.1"/>
   </g>
   
-  <!-- Formes décoratives flottantes -->
-  <circle cx="80" cy="60" r="45" fill="none" stroke="#00E5FF" stroke-width="1.5" opacity="0.2"/>
-  <circle cx="80" cy="60" r="30" fill="none" stroke="#00E5FF" stroke-width="1" opacity="0.15"/>
+  <g class="floating" style="animation-delay: 1s;">
+    <circle cx="1250" cy="350" r="90" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.15"/>
+    <circle cx="1250" cy="350" r="60" fill="none" stroke="#7C3AED" stroke-width="0.5" opacity="0.1"/>
+  </g>
   
-  <circle cx="1120" cy="260" r="55" fill="none" stroke="#7C3AED" stroke-width="1.5" opacity="0.2"/>
-  <circle cx="1120" cy="260" r="35" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.15"/>
+  <!-- Grid Background -->
+  <g stroke="#00E5FF" stroke-width="0.5" opacity="0.05">
+    <line x1="0" y1="112" x2="1400" y2="112"/>
+    <line x1="0" y1="224" x2="1400" y2="224"/>
+    <line x1="0" y1="336" x2="1400" y2="336"/>
+    <line x1="350" y1="0" x2="350" y2="450"/>
+    <line x1="700" y1="0" x2="700" y2="450"/>
+    <line x1="1050" y1="0" x2="1050" y2="450"/>
+  </g>
   
-  <!-- Rectangles décoratifs -->
-  <rect x="50" y="270" width="60" height="30" fill="none" stroke="#00E5FF" stroke-width="1.5" opacity="0.15" transform="rotate(-15 80 285)"/>
-  <rect x="1090" y="20" width="70" height="40" fill="none" stroke="#7C3AED" stroke-width="1.5" opacity="0.15" transform="rotate(25 1125 40)"/>
+  <!-- Decorative Accent Lines -->
+  <line x1="200" y1="80" x2="450" y2="80" stroke="#00E5FF" stroke-width="2" opacity="0.3"/>
+  <line x1="950" y1="80" x2="1200" y2="80" stroke="#7C3AED" stroke-width="2" opacity="0.3"/>
   
-  <!-- Titre principal -->
-  <text x="600" y="75" font-size="72" font-weight="900" text-anchor="middle" fill="url(#titleGrad)" font-family="monospace" filter="url(#glow)">TOUM001</text>
+  <!-- Main Title -->
+  <text x="700" y="110" font-size="96" font-weight="900" text-anchor="middle" fill="url(#titleGrad)" font-family="monospace" filter="url(#glow)" letter-spacing="2">TOUM001</text>
   
-  <!-- Sous-titre -->
-  <text x="600" y="130" font-size="26" text-anchor="middle" fill="#00E5FF" font-family="monospace" font-weight="bold" opacity="0.95">Full-Stack Developer • AI/ML Enthusiast</text>
+  <!-- Subtitle -->
+  <text x="700" y="185" font-size="32" text-anchor="middle" fill="#00E5FF" font-family="monospace" font-weight="700" opacity="0.95">Full-Stack Developer</text>
+  <text x="700" y="225" font-size="32" text-anchor="middle" fill="#7C3AED" font-family="monospace" font-weight="700" opacity="0.95">AI/ML Enthusiast</text>
   
   <!-- Description -->
-  <text x="600" y="160" font-size="15" text-anchor="middle" fill="#A0AEC0" font-family="Arial, sans-serif">Building innovative solutions with modern tech stack</text>
+  <text x="700" y="265" font-size="16" text-anchor="middle" fill="#A0AEC0" font-family="Arial, sans-serif">Building innovative solutions with modern technologies</text>
   
-  <!-- Ligne décorative premium -->
-  <g opacity="0.4">
-    <line x1="200" y1="175" x2="1000" y2="175" stroke="#00E5FF" stroke-width="2"/>
-    <line x1="200" y1="177" x2="1000" y2="177" stroke="#7C3AED" stroke-width="1" opacity="0.6"/>
+  <!-- Separator Line Premium -->
+  <g opacity="0.5">
+    <line x1="300" y1="285" x2="1100" y2="285" stroke="url(#titleGrad)" stroke-width="2.5"/>
+    <circle cx="700" cy="285" r="4" fill="#00E5FF" opacity="0.8"/>
   </g>
   
-  <!-- Stat boxes avec gradients -->
-  <g id="stat-boxes">
-    <!-- Box 1 -->
-    <rect x="100" y="205" width="310" height="85" rx="12" fill="url(#box1Grad)" stroke="#00E5FF" stroke-width="2.5" opacity="0.9"/>
-    <rect x="105" y="210" width="300" height="75" rx="10" fill="none" stroke="#00E5FF" stroke-width="1" opacity="0.3"/>
-    <text x="255" y="240" font-size="16" font-weight="bold" text-anchor="middle" fill="#00E5FF" font-family="Arial, sans-serif">10+ PROJECTS</text>
-    <text x="255" y="262" font-size="12" text-anchor="middle" fill="#A0AEC0" font-family="Arial, sans-serif" opacity="0.9">Created &amp; Deployed</text>
-    <text x="255" y="278" font-size="10" text-anchor="middle" fill="#A0AEC0" font-family="Arial, sans-serif" opacity="0.6">Production Ready</text>
+  <!-- Stat Cards with Enhanced Styling -->
+  <g id="stat-cards">
+    <!-- Card 1 -->
+    <g class="pulsing" style="animation-delay: 0s;">
+      <rect x="80" y="320" width="340" height="110" rx="16" fill="url(#boxGrad1)" stroke="#00E5FF" stroke-width="2.5"/>
+      <rect x="90" y="330" width="320" height="90" rx="14" fill="none" stroke="#00E5FF" stroke-width="0.5" opacity="0.2"/>
+      
+      <!-- Icon Circle -->
+      <circle cx="130" cy="360" r="20" fill="none" stroke="#00E5FF" stroke-width="2" opacity="0.6"/>
+      <text x="130" y="368" font-size="20" text-anchor="middle" fill="#00E5FF">📦</text>
+      
+      <!-- Text -->
+      <text x="250" y="355" font-size="18" font-weight="bold" fill="#00E5FF">10+</text>
+      <text x="250" y="375" font-size="13" fill="#A0AEC0">Projects Created</text>
+      <text x="250" y="395" font-size="11" fill="#A0AEC0" opacity="0.7">Production Ready</text>
+    </g>
     
-    <!-- Box 2 -->
-    <rect x="445" y="205" width="310" height="85" rx="12" fill="url(#box2Grad)" stroke="#7C3AED" stroke-width="2.5" opacity="0.9"/>
-    <rect x="450" y="210" width="300" height="75" rx="10" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.3"/>
-    <text x="600" y="240" font-size="16" font-weight="bold" text-anchor="middle" fill="#7C3AED" font-family="Arial, sans-serif">5+ LANGUAGES</text>
-    <text x="600" y="262" font-size="12" text-anchor="middle" fill="#A0AEC0" font-family="Arial, sans-serif" opacity="0.9">Expert Level</text>
-    <text x="600" y="278" font-size="10" text-anchor="middle" fill="#A0AEC0" font-family="Arial, sans-serif" opacity="0.6">Mastered Concepts</text>
+    <!-- Card 2 -->
+    <g class="pulsing" style="animation-delay: 0.6s;">
+      <rect x="530" y="320" width="340" height="110" rx="16" fill="url(#boxGrad2)" stroke="#7C3AED" stroke-width="2.5"/>
+      <rect x="540" y="330" width="320" height="90" rx="14" fill="none" stroke="#7C3AED" stroke-width="0.5" opacity="0.2"/>
+      
+      <!-- Icon Circle -->
+      <circle cx="580" cy="360" r="20" fill="none" stroke="#7C3AED" stroke-width="2" opacity="0.6"/>
+      <text x="580" y="368" font-size="20" text-anchor="middle" fill="#7C3AED">💻</text>
+      
+      <!-- Text -->
+      <text x="700" y="355" font-size="18" font-weight="bold" fill="#7C3AED">5+</text>
+      <text x="700" y="375" font-size="13" fill="#A0AEC0">Languages Mastered</text>
+      <text x="700" y="395" font-size="11" fill="#A0AEC0" opacity="0.7">Expert Level</text>
+    </g>
     
-    <!-- Box 3 -->
-    <rect x="790" y="205" width="310" height="85" rx="12" fill="url(#box3Grad)" stroke="#00E5FF" stroke-width="2.5" opacity="0.9"/>
-    <rect x="795" y="210" width="300" height="75" rx="10" fill="none" stroke="#00E5FF" stroke-width="1" opacity="0.3"/>
-    <text x="945" y="240" font-size="16" font-weight="bold" text-anchor="middle" fill="#00E5FF" font-family="Arial, sans-serif">TECH DRIVEN</text>
-    <text x="945" y="262" font-size="12" text-anchor="middle" fill="#A0AEC0" font-family="Arial, sans-serif" opacity="0.9">Always Learning</text>
-    <text x="945" y="278" font-size="10" text-anchor="middle" fill="#A0AEC0" font-family="Arial, sans-serif" opacity="0.6">Innovation Focused</text>
+    <!-- Card 3 -->
+    <g class="pulsing" style="animation-delay: 1.2s;">
+      <rect x="980" y="320" width="340" height="110" rx="16" fill="url(#boxGrad3)" stroke="#00E5FF" stroke-width="2.5"/>
+      <rect x="990" y="330" width="320" height="90" rx="14" fill="none" stroke="#00E5FF" stroke-width="0.5" opacity="0.2"/>
+      
+      <!-- Icon Circle -->
+      <circle cx="1030" cy="360" r="20" fill="none" stroke="#00E5FF" stroke-width="2" opacity="0.6"/>
+      <text x="1030" y="368" font-size="20" text-anchor="middle" fill="#00E5FF">🚀</text>
+      
+      <!-- Text -->
+      <text x="1150" y="355" font-size="18" font-weight="bold" fill="#00E5FF">Always</text>
+      <text x="1150" y="375" font-size="13" fill="#A0AEC0">Innovating & Learning</text>
+      <text x="1150" y="395" font-size="11" fill="#A0AEC0" opacity="0.7">Tech Driven</text>
+    </g>
   </g>
 </svg>
 
-<!-- Real GitHub Badges -->
-<a href="https://github.com/Toum001">
-  <img alt="GitHub followers" src="https://img.shields.io/github/followers/Toum001?style=flat-square&labelColor=1E293B&color=00E5FF&logo=github"/>
-</a>
+<br/>
 
-<a href="https://github.com/Toum001?tab=stars">
-  <img alt="GitHub User's stars" src="https://img.shields.io/github/stars/Toum001?style=flat-square&labelColor=1E293B&color=7C3AED&logo=github"/>
-</a>
+<!-- GitHub Badges -->
+<div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+  <a href="https://github.com/Toum001">
+    <img alt="GitHub followers" src="https://img.shields.io/github/followers/Toum001?style=flat-square&labelColor=1E293B&color=00E5FF&logo=github&logoColor=00E5FF"/>
+  </a>
+  <a href="https://github.com/Toum001?tab=stars">
+    <img alt="GitHub stars" src="https://img.shields.io/github/stars/Toum001?style=flat-square&labelColor=1E293B&color=7C3AED&logo=github&logoColor=7C3AED"/>
+  </a>
+  <a href="https://github.com/Toum001">
+    <img alt="Profile Views" src="https://komarev.com/ghpvc/?username=Toum001&style=flat-square&labelColor=1E293B&color=00E5FF"/>
+  </a>
+</div>
 
 ---
 
