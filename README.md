@@ -115,7 +115,7 @@ As a versatile developer, I specialize in building efficient, scalable applicati
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Toum001&layout=compact&theme=nightowl&hide_border=true&bg_color=0F172A&title_color=00E5FF&text_color=A0AEC0)
 
 <!-- GitHub Streak -->
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Toum001&theme=nightowl&hide_border=true&background=0F172A&stroke=00E5FF&ring=7C3AED&fire=00E5FF&currStreakNum=00E5FF&sideNums=A0AEC0&currStreakLabel=7C3AED&sideLabels=A0AEC0&dates=A0AEC0)
+![GitHub Streak](https://streak-stats.demolab.com?user=Toum001&theme=nightowl&hide_border=true&background=0F172A&stroke=00E5FF&ring=7C3AED&fire=00E5FF&currStreakNum=00E5FF&sideNums=A0AEC0&currStreakLabel=7C3AED&sideLabels=A0AEC0&dates=A0AEC0)
 
 </div>
 
@@ -149,14 +149,9 @@ As a versatile developer, I specialize in building efficient, scalable applicati
 
 <div align="center">
 
-```
-┌─────────────────────────────────────────────────┐
-│  🔬 Advanced Full-Stack Projects                │
-│  🤖 Machine Learning & AI Implementations       │
-│  🌐 Cloud Architecture & Microservices          │
-│  📚 Open-source Contributions                   │
-└─────────────────────────────────────────────────┘
-```
+🔬 &nbsp;**Advanced Full-Stack Projects** &nbsp;•&nbsp; 🤖 &nbsp;**Machine Learning & AI**
+
+🌐 &nbsp;**Cloud Architecture & Microservices** &nbsp;•&nbsp; 📚 &nbsp;**Open-source Contributions**
 
 </div>
 
@@ -247,6 +242,6 @@ To enable this animation:
 
 <br/>
 
-<sub>Last updated: 2026-06-14</sub> | <sub>Crafted with ❤️ by Toum001</sub>
+<sub>Last updated: 2026-06-16</sub> | <sub>Crafted with ❤️ by Toum001</sub>
 
 </div>
