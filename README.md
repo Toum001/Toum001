@@ -1,32 +1,26 @@
-<div align="center">
+<!-- ============================================================================= -->
+<!-- HERO — animated typing SVG (served as image, so it animates on GitHub) -->
+<!-- ============================================================================= -->
 
-# 🚀 TOUM001 — Full-Stack Developer • AI/ML Enthusiast
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:00E5FF,100:7C3AED&height=220&section=header&text=TOUM001&fontSize=70&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Code.%20Build.%20Innovate.%20Repeat.&descAlignY=58&descSize=18" alt="header" />
 
-### Building innovative solutions with modern technologies
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&pause=1000&color=00E5FF&center=true&vCenter=true&width=600&lines=Full-Stack+Developer;AI%2FML+Enthusiast;C+%7C+C%2B%2B+%7C+JavaScript+%7C+Node.js;Building+innovative+solutions" alt="Typing SVG" />
+</p>
 
-<a href="https://github.com/Toum001">
-  <img alt="GitHub followers" src="https://img.shields.io/github/followers/Toum001?style=flat-square&labelColor=1E293B&color=00E5FF&logo=github&logoColor=00E5FF"/>
-</a>
-<a href="https://github.com/Toum001?tab=stars">
-  <img alt="GitHub stars" src="https://img.shields.io/github/stars/Toum001?style=flat-square&labelColor=1E293B&color=7C3AED&logo=github&logoColor=7C3AED"/>
-</a>
-<a href="https://github.com/Toum001">
-  <img alt="Profile Views" src="https://komarev.com/ghpvc/?username=Toum001&style=flat-square&labelColor=1E293B&color=00E5FF"/>
-</a>
-
----
-
-### 📊 Key Metrics
-
-| Metric | Value |
-|--------|-------|
-| **Projects** | 10+ Production Ready |
-| **Languages** | 5+ (Expert Level) |
-| **Focus** | Tech-Driven Innovation |
+<p align="center">
+  <a href="https://github.com/Toum001">
+    <img alt="GitHub followers" src="https://img.shields.io/github/followers/Toum001?style=for-the-badge&labelColor=0F172A&color=00E5FF&logo=github&logoColor=00E5FF"/>
+  </a>
+  <a href="https://github.com/Toum001?tab=stars">
+    <img alt="GitHub stars" src="https://img.shields.io/github/stars/Toum001?style=for-the-badge&labelColor=0F172A&color=7C3AED&logo=github&logoColor=7C3AED"/>
+  </a>
+  <a href="https://github.com/Toum001">
+    <img alt="Profile Views" src="https://komarev.com/ghpvc/?username=Toum001&style=for-the-badge&label=PROFILE+VIEWS&labelColor=0F172A&color=00E5FF"/>
+  </a>
+</p>
 
 ---
-
-</div>
 
 <div align="center">
 
@@ -245,3 +239,5 @@ To enable this animation:
 <sub>Last updated: 2026-06-16</sub> | <sub>Crafted with ❤️ by Toum001</sub>
 
 </div>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:7C3AED,100:00E5FF&height=120&section=footer" alt="footer" />
